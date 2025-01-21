@@ -11,15 +11,15 @@ import java.util.Objects;
 public class Belonging {
     @EmbeddedId
     private BelongingPK id = new BelongingPK();
-    private Integer poisition;
+    private Integer position;
 
     public Belonging() {
     }
 
-    public Belonging(Game game,GameList list, Integer poisition) {
+    public Belonging(Game game,GameList list, Integer position) {
         this.id.setGame(game);
         this.id.setList(list);
-        this.poisition = poisition;
+        this.position = position;
     }
 
     public BelongingPK getId() {
@@ -30,12 +30,12 @@ public class Belonging {
         this.id = id;
     }
 
-    public Integer getPoisition() {
-        return poisition;
+    public Integer getPosition() {
+        return position;
     }
 
-    public void setPoisition(Integer poisition) {
-        this.poisition = poisition;
+    public void setPosition(Integer position) {
+        this.position = position;
     }
 
     @Override
